@@ -5,4 +5,4 @@ Access the deployed web application at: http://localhost:8081
 
 Clone the repository:
 
-$ git clone git://github.com/SpringSource/spring-mvc-showcase.git
+$ git clone https://github.com/eftalwin/report.git
