@@ -4,6 +4,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import com.alwin.incident.report.data.models.Status;
 
+
 public class ReportRequest {
 	
 	private String creator;

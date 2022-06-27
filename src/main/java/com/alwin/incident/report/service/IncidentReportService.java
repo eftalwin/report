@@ -17,6 +17,7 @@ import com.alwin.incident.report.data.payloads.Response;
  */
 @Component
 public interface IncidentReportService {
+	
 	Response createIncident(ReportRequest reportRequest);
 
 	List<Incident> getAllIncidents();

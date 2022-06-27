@@ -24,12 +24,51 @@ Postman
 
 
 Setup:-
-
 --------
 
 create a database name as 'incidentreport' .
 
-create a default row in 'user' ->  username 'admin' and password 'admin123'.
+
+Postman REST API:-
+-------------------
+
+POST METHOD
+-----------
+
+*localhost:8081/report/add
+{
+"creator":"Mariam",
+"title":"error in updating",
+"assignee":"Ben",
+"status":"NEW"
+}
+
+*localhost:8081/report/adduser
+{
+   "id": 1,
+   "userName": "admin",
+   "password": "admin"
+}
+
+GET METHOD
+-----------
+*To get all users ->  localhost:8081/report/alluser
+*To get all all incidents -> localhost:8081/report/all
+*To get single incident -> localhost:8081/report/find/{id}
+*To get incident by creator -> localhost:8081/report/creator/{name}
+
+UPDATE METHOD
+-------------
+
+*To update incident report -> localhost:8081/report/update/{id}
+*To update user -> localhost:8081/report/updateuser/{id}
+
+DELETE METHOD
+-------------
+
+*To delete incident -> localhost:8081/report/delete/{id}
+*To delete user -> localhost:8081/report/deleteuser/{id}
+
 
 
 Webpage urls:-

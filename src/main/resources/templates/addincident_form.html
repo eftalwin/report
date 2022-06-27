@@ -29,8 +29,10 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 
-				<li class="nav-item"><a class="nav-link" th:href="@{/register}">New
-						User</a></li>
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/newincident}">Add Incident </a></li>
+				<li class="nav-item"><a class="nav-link"
+					th:href="@{/myincidents}">My Incidents </a></li>
 				<li><form th:action="@{/logout}" method="post">
 						<input class="btn btn-primary btn-sm mb-3" type="submit"
 							value="Sign Out" />
@@ -39,17 +41,7 @@
 		</div>
 	</nav>
 
-	<div class="container text-center">
-		<div>
-			<form th:action="@{/logout}" method="post">
-				<p>
-					Welcome <b></b>
-				</p>
-				<input class="btn btn-primary btn-sm mb-3" type="submit"
-					value="Sign Out" />
-			</form>
-		</div>
-	</div>
+	
 
 	<br>
 	<br>

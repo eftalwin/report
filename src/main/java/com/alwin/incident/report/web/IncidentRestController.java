@@ -4,6 +4,7 @@
 package com.alwin.incident.report.web;
 
 import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +20,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alwin.incident.report.data.models.Incident;
+import com.alwin.incident.report.data.models.User;
 import com.alwin.incident.report.data.payloads.ReportRequest;
 import com.alwin.incident.report.data.payloads.Response;
 import com.alwin.incident.report.service.IncidentReportService;
+import com.alwin.incident.report.service.UserService;
 
 /**
  * @author anubi
@@ -29,10 +32,13 @@ import com.alwin.incident.report.service.IncidentReportService;
  */
 @RestController
 @RequestMapping("/report")
-public class IncidentController {
+public class IncidentRestController {
 
 	@Autowired
 	IncidentReportService incidentReportService;
+
+	@Autowired
+	UserService userService;
 
 	@PostMapping("/add")
 	public ResponseEntity<Response> addIncident(@Valid @RequestBody ReportRequest report) {
@@ -40,16 +46,35 @@ public class IncidentController {
 		return new ResponseEntity<>(response, HttpStatus.CREATED);
 	}
 
+	@PostMapping("/adduser")
+	public ResponseEntity<Response> addUser(@Valid @RequestBody User user) {
+		Response response = userService.saveUser(user);
+		return new ResponseEntity<>(response, HttpStatus.CREATED);
+	}
+
 	@GetMapping("/all")
 	public ResponseEntity<List<Incident>> getAllIncidents() {
 		List<Incident> incident = incidentReportService.getAllIncidents();
+		System.out.println(incident.toString());
 		return new ResponseEntity<>(incident, HttpStatus.OK);
+	}
+
+	@GetMapping("/alluser")
+	public ResponseEntity<List<User>> getAllUsers() {
+		List<User> user = userService.getAllUsers();
+		return new ResponseEntity<>(user, HttpStatus.OK);
 	}
 
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Response> updateIncidentById(@PathVariable Integer id, @RequestBody ReportRequest request) {
 		Response updateIncident = incidentReportService.updateIncident(id, request);
 		return new ResponseEntity<>(updateIncident, HttpStatus.OK);
+	}
+
+	@PutMapping("/updateuser/{id}")
+	public ResponseEntity<Response> updateUserById(@PathVariable Integer id, @RequestBody User request) {
+		Response updateUser = userService.updateUser(id, request);
+		return new ResponseEntity<>(updateUser, HttpStatus.OK);
 	}
 
 	@GetMapping("/creator/{name}")
@@ -61,6 +86,12 @@ public class IncidentController {
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<?> deleteIncident(@PathVariable("id") Integer id) {
 		Response response = incidentReportService.deleteIncident(id);
+		return new ResponseEntity<>(response, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/deleteuser/{id}")
+	public ResponseEntity<?> deleteUser(@PathVariable("id") Integer id) {
+		Response response = userService.deleteUser(id);
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
