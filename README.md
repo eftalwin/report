@@ -52,22 +52,22 @@ POST METHOD
 
 GET METHOD
 -----------
-*To get all users ->  localhost:8081/report/alluser
-*To get all all incidents -> localhost:8081/report/all
-*To get single incident -> localhost:8081/report/find/{id}
-*To get incident by creator -> localhost:8081/report/creator/{name}
+* To get all users ->  localhost:8081/report/alluser
+* To get all all incidents -> localhost:8081/report/all
+* To get single incident -> localhost:8081/report/find/{id}
+* To get incident by creator -> localhost:8081/report/creator/{name}
 
 UPDATE METHOD
 -------------
 
-*To update incident report -> localhost:8081/report/update/{id}
-*To update user -> localhost:8081/report/updateuser/{id}
+* To update incident report -> localhost:8081/report/update/{id}
+* To update user -> localhost:8081/report/updateuser/{id}
 
 DELETE METHOD
 -------------
 
-*To delete incident -> localhost:8081/report/delete/{id}
-*To delete user -> localhost:8081/report/deleteuser/{id}
+* To delete incident -> localhost:8081/report/delete/{id}
+* To delete user -> localhost:8081/report/deleteuser/{id}
 
 
 
