@@ -39,6 +39,6 @@ Webpage urls:-
 * To login -> localhost:8081/login
 * To view Incidents reports-> localhost:8081/all
 * To add Incidents reports -> localhost:8081/newincident
-*To view My reports-> localhost:8081/myincidnets
-*To update Incidents reports-> localhost:8081/update/{id}
-To delete Incidents reports-> localhost:8081/delete/{id}
+* To view My reports-> localhost:8081/myincidnets
+* To update Incidents reports-> localhost:8081/update/{id}
+* To delete Incidents reports-> localhost:8081/delete/{id}
