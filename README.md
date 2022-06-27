@@ -14,12 +14,12 @@ Incident Management System (CRUD web application)
 Configurations:-
 ------------------------
 
-Spring Boot
-Spring MVC
-Spring Data JPA
-ThymeLeaf
-MySQL
-Java 17
+Spring Boot,
+Spring MVC,
+Spring Data JPA,
+ThymeLeaf,
+MySQL,
+Java 17,
 Postman
 
 
