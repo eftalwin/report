@@ -34,11 +34,11 @@ create a default row in 'user' ->  username 'admin' and password 'admin123'.
 
 Webpage urls:-
 ------------------------
-Homepage - localhost:8081
-New user registeration-> localhost:8081/register
-To login -> localhost:8081/login
-To view Incidents reports-> localhost:8081/all
-To add Incidents reports -> localhost:8081/newincident
-To view My reports-> localhost:8081/myincidnets
-To update Incidents reports-> localhost:8081/update/{id}
+* Homepage - localhost:8081
+* New user registeration-> localhost:8081/register
+* To login -> localhost:8081/login
+* To view Incidents reports-> localhost:8081/all
+* To add Incidents reports -> localhost:8081/newincident
+*To view My reports-> localhost:8081/myincidnets
+*To update Incidents reports-> localhost:8081/update/{id}
 To delete Incidents reports-> localhost:8081/delete/{id}
