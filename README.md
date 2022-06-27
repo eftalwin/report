@@ -6,3 +6,27 @@ Access the deployed web application at: http://localhost:8081
 Clone the repository:
 
 $ git clone https://github.com/eftalwin/report.git
+
+
+Incident Management System (CRUD web application)
+==============================================================
+
+Configurations:-
+------------------------
+
+Spring Boot
+Spring MVC
+Spring Data JPA
+ThymeLeaf
+MySQL
+Java 17
+Postman
+
+
+Setup
+
+--------
+
+create a database name as 'incidentreport' .
+
+create a default row in 'user' ->  username 'admin' and password 'admin123'.
